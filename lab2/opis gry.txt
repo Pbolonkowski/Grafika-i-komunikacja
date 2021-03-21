@@ -1,0 +1,9 @@
+Gra zosta³a zrobiona w Javie. W klasie Main tworzê obiekt, którym ustawiam wysokoœæ i szerokoœæ ramki. Ustawiam tytu³, widocznoœæ na true i ustawiam zamykanie iksem za pomoc¹ setDefaultCloseOperation. Nastepnie dodaje obiekt gamePlay.
+W klasie MapGenerator generuje klocki, ich wielkoœæ, kolor i je rysuje za pomoca metody draw.
+Je¿eli chodzi o sam¹ gre to celem jest zdobycie 200 punktów, czyli zbiciu wszystkich bloków na mapie. Gracz odbija spadaj¹c¹ pi³ke dzieki panelowi, jezeli gracz nie odbije pi³ki to jest koniec gry i znika ca³a plansza(przemalowuje j¹ na czarno) i wyswietlony jest wynik. Je¿eli gracz przekroczy pewny etap gry, zmienia sie kolor pi³ki. Pi³ka za ka¿dym razem ma przydzielony randomowy k¹t wystartowania zdefiniowany poprzez metody getRandomumberForX i Y oraz prêdkosc pi³ki.
+Opis wykorzystanych metod:
+MapGenerator() generuje bloki
+metoda void draw()rysuje bloki
+Klasa GamePlay implementuje nasluchiwanie klawiszy i ActionListener do poruszania kuli
+paint() metoda koloruje i ustawia pod odpowiedni kolor w zaleznosci od etapu gry
+repaint(); -przemalowuje plansze po odpowiednim ustawionym czasie. 
