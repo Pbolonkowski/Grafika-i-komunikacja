@@ -1,0 +1,381 @@
+import javax.imageio.ImageIO;
+
+import java.awt.image.BufferedImage;
+
+import java.io.File;
+
+import java.io.IOException;
+
+
+
+public class krzywebezier {
+
+
+
+
+
+    public static class Bezier  {
+
+        int height;
+
+        public int[][][] image;
+
+        int width;
+
+        public Bezier(int width_p, int height_p, int r, int g, int b) {
+
+            this.width = width_p;
+
+            this.height = height_p;
+
+            image = new int[3][height][width];
+
+
+
+            for (int i = 0; i < height; ++i) {
+
+
+
+                for (int j = 0; j < width; ++j) {
+
+                    image[0][i][j] = (byte) r;
+
+                    image[1][i][j] = (byte) g;
+
+                    image[2][i][j] = (byte) b;
+
+
+
+                }
+
+            }
+
+        }
+
+
+
+        protected void set_pixel(int x, int y, int r, int g, int b) {
+
+            try {
+
+                if (y > -1 && x > -1 && y < height && x < width) {
+
+                    image[0][y][x] = (byte) r;
+
+                    image[1][y][x] = (byte) g;
+
+                    image[2][y][x] = (byte) b;
+
+                }
+
+            } catch (Exception e) {
+
+                System.err.println("Exception: y=" + y + " x=" + x);
+
+            }
+
+        }
+
+
+
+        public int[] cubic(int[] P0, int[] P1, int[] P2, int[] P3) {
+
+            /*------------------ Firt Column --------------------------*/
+
+            int C3x = (-1 * P0[0]) + (3 * P1[0]) + (-3 * P2[0]) + (1 * P3[0]);
+
+            int C2x = (3 * P0[0]) + (-6 * P1[0]) + (3 * P2[0]) + (0);
+
+            int C1x = (-3 * P0[0]) + (3 * P1[0]) + (0) + (0);
+
+            int C0x = (1 * P0[0]) + (0) + (0) + (0);
+
+
+
+            /*------------------ Second  Column -----------------------*/
+
+            int C3y = (-1 * P0[1]) + (3 * P1[1]) + (-3 * P2[1]) + (1 * P3[1]);
+
+            int C2y = (3 * P0[1]) + (-6 * P1[1]) + (3 * P2[1]) + (0);
+
+            int C1y = (-3 * P0[1]) + (3 * P1[1]) + (0) + (0);
+
+            int C0y = (1 * P0[1]) + (0) + (0) + (0);
+
+
+
+            /*---------------------------------------------------------*/
+
+
+
+            int array[] = {C0x, C0y, C1x, C1y, C2x, C2y, C3x, C3y};
+
+
+
+            return array;
+
+
+
+        }
+
+
+
+        public void steps(int[] P0, int[] P1, int[] P2, int[] P3, double step) {
+
+            int array[] = cubic(P0, P1, P2, P3);
+
+            int x, y, z;
+
+            int C0x, C0y, C1x, C1y, C2x, C2y, C3x, C3y;
+
+
+
+            C0x = array[0];
+
+            C0y = array[1];
+
+            C1x = array[2];
+
+            C1y = array[3];
+
+            C2x = array[4];
+
+            C2y = array[5];
+
+            C3x = array[6];
+
+            C3y = array[7];
+
+
+
+            int array2[][] = new int[(int) (1 / step)][2];
+
+            int i = 0;
+
+
+
+            for (double u = 0.00; u < 1; u += step) {
+
+                x = (int) (C0x + C1x * u + C2x * u * u + C3x * u * u * u);
+
+                y = (int) (C0y + C1y * u + C2y * u * u + C3y * u * u * u);
+
+
+
+                array2[i][0] = x;
+
+                array2[i][1] = y;
+
+                i++;
+
+
+
+                set_pixel(x, y, 255, 255, 0);
+
+            }
+
+
+
+        }
+
+        public void write(String filename) {
+
+            System.out.println("Writing image into: " + filename);
+
+            try {
+
+                BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+
+                for (int i = 0; i < height; ++i) {
+
+                    for (int j = 0; j < width; ++j) {
+
+                        int pixel = (image[0][i][j] << 16) | (image[1][i][j] << 8) | (image[2][i][j]);
+
+                        bi.setRGB(j, i, pixel);
+
+                    }
+
+                }
+
+                File outputfile = new File(filename);
+
+                ImageIO.write(bi, "png", outputfile);
+
+            } catch (IOException e) {
+
+                System.out.println("Image write error");
+
+            }
+
+            System.out.println("Sucessfull");
+
+        }
+
+    }
+
+    public static void main (String[]args){
+
+
+
+        int image_width = 600;
+
+        int image_height = 600;
+
+        double Step = 0.001;
+
+
+
+        System.out.println("--------------------------------------------");
+
+
+
+        System.out.println("Processing Bezier Curve ...");
+
+        Bezier bezier = new Bezier(image_width, image_height, 0, 0, 0);
+        
+        //B
+
+        int[] Point1 = {122, 75};
+
+        int[] Point2 = {125, 231};
+
+        int[] Point3 = {125, 231};
+
+        int[] Point4 = {125, 275};
+
+        int[] Point5 = {125, 295};
+
+        int[] Point6 = {123, 295};
+
+        int[] Point7 = {120, 295};
+
+        int[] Point8 = {90, 320};
+
+        int[] Point9 = {115, 331};
+
+        int[] Point10 = {175, 323};
+
+        int[] Point11 = {180, 320};
+
+        int[] Point12 = {198, 307};
+
+        int[] Point13 = {168, 295};
+
+        int[] Point14 = {168, 220};
+
+        int[] Point15 = {169, 200};
+
+        int[] Point16 = {174, 190};
+
+        int[] Point17 = {247, 185};
+
+        int[] Point18 = {253, 185};
+
+        int[] Point19 = {260, 145};
+
+        int[] Point20 = {262, 131};
+
+        int[] Point21 = {260, 100};
+
+        int[] Point22 = {254, 90};
+
+        int[] Point23 = {240, 73};
+
+        int[] Point24 = {237, 74};
+
+        int[] Point25 = {233, 72};
+
+        int[] Point26 = {205, 70};
+
+        int[] Point27 = {177, 70};
+
+        int[] Point28 = {169, 130};
+        int[] Point29 = {176, 90};
+        int[] Point30 = {208, 90};
+        int[] Point31 = {223, 100};
+
+        int[] Point32 = {239, 120};
+        int[] Point33 = {238, 140};
+        int[] Point34 = {217, 160};
+        int[] Point35 = {195, 163};
+        int[] Point36 = {179, 157};
+
+        //litera B
+        int[] Point37 = {341, 70};
+        int[] Point38 = {359, 160};
+        int[] Point39 = {350, 250};
+        int[] Point40 = {341, 320};
+
+        int[] Point41 = {381, 322};
+        int[] Point42 = {429, 324};
+        int[] Point43 = {466, 296};
+        int[] Point44 = {489, 240};
+        int[] Point45 = {469, 200};
+        int[] Point46 = {420, 190};
+        int[] Point47 = {489, 190};
+        int[] Point48 = {489, 30};
+
+//puste pola w B
+        int[] Point50 = {371, 220};
+        int[] Point51 = {376, 260};
+        int[] Point52 = {376, 280};
+        int[] Point53 = {371, 300};
+        int[] Point54 = {441, 300};
+        int[] Point55 = {461, 290};
+        int[] Point56 = {451, 240};
+        int[] Point57 = {431, 220};
+        int[] Point58 = {421, 210};
+
+        int[] Point59 = {366, 90};
+        int[] Point60 = {376, 140};
+        int[] Point61 = {376, 160};
+        int[] Point62 = {371, 180};
+        int[] Point63 = {431, 180};
+        int[] Point64 = {451, 170};
+        int[] Point65 = {441, 120};
+        int[] Point66 = {431, 100};
+        int[] Point67 = {421, 80};
+
+
+        bezier.steps(Point1, Point2, Point3, Point4, Step);
+
+        bezier.steps(Point4, Point5, Point6, Point7, Step);
+
+        bezier.steps(Point7, Point8, Point9, Point10, Step);
+
+        bezier.steps(Point10, Point11, Point12, Point13, Step);
+
+        bezier.steps(Point13, Point14, Point15, Point16, Step);
+
+        bezier.steps(Point16, Point17, Point18, Point19, Step);
+
+        bezier.steps(Point19, Point20, Point21, Point22, Step);
+
+        bezier.steps(Point22, Point23, Point24, Point25, Step);
+
+        bezier.steps(Point25, Point26, Point27, Point1, Step);
+//kolo w P
+        bezier.steps(Point28, Point29, Point30, Point31, Step);
+        bezier.steps(Point31, Point32, Point33, Point34, Step);
+        bezier.steps(Point34, Point35, Point36, Point28, Step);
+//B
+        bezier.steps(Point37, Point38, Point39, Point40, Step);
+        bezier.steps(Point40, Point41, Point42, Point43, Step);
+        bezier.steps(Point43, Point44, Point45, Point46, Step);
+        bezier.steps(Point46, Point47, Point48, Point37, Step);
+//puste pola w B
+        bezier.steps(Point50, Point51, Point52, Point53, Step);
+        bezier.steps(Point53, Point54, Point55, Point56, Step);
+        bezier.steps(Point56, Point57, Point58, Point50, Step);
+
+        bezier.steps(Point59, Point60, Point61, Point62, Step);
+        bezier.steps(Point62, Point63, Point64, Point65, Step);
+        bezier.steps(Point65, Point66, Point67, Point59, Step);
+
+        bezier.write("bezier.png");
+
+    }
+
+}
+
