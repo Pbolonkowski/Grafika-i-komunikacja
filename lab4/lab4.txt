@@ -1,7 +1,7 @@
-tworzê 3 tablice dwuwymiarowe x y z.
-w metodzie round zaokr¹glam do liczby.
+tworzÄ™ 3 tablice dwuwymiarowe x y z.
+W metodzie round zaokrÅ¡glam do liczby.
 w metodzie oblicz wczytuje pliki o nazwach dane dane2 dane3.
 i zapisuje je o nazwie czajnik filizanka lyzka.
-w pêtli while parsuje na dabla.
-w pêtli stosuje wzór powierzchni beziera i zapisuje do pliku w odpowiedni sposób. 
-W main tworze obiekt czajnik i wywo³uje metode oblicz().
+w pÄ™tli while parsuje na dabla.
+w pÄ™tli stosuje wzÃ³r powierzchni beziera i zapisuje do pliku w odpowiedni sposÃ³b. 
+W main tworze obiekt czajnik i wywoÅ‚uje metode oblicz().
