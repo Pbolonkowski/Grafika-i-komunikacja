@@ -3,5 +3,5 @@ W metodzie round zaokršglam do liczby.
 w metodzie oblicz wczytuje pliki o nazwach dane dane2 dane3.
 i zapisuje je o nazwie czajnik filizanka lyzka.
 w pętli while parsuje na dabla.
-w pętli stosuje wzór powierzchni beziera i zapisuje do pliku w odpowiedni sposób. 
+w pętli stosuje wzóry podane z treści i zapisuje do pliku w odpowiedni sposób. 
 W main tworze obiekt czajnik i wywołuje metode oblicz().
