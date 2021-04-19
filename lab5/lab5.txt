@@ -1,0 +1,7 @@
+Lab5. 16 wzorów
+Program napisany w C#. Na pocz¹tku stworzy³em ca³y interfejs, guziki wczytywania 2 plików(jego szerokosci i wysokoœci), przycisku zamknij i 16 wzorów podanych z wyk³adów. Co do programu to w stworzy³em 3 picture boxy które pokazuj¹ obrazki. Pierwszy i drugi box wyswietla obrazy wczytane z komputera a trzeci box wyswietli odpowiedni¹ opcje klikniêt¹ przez uzytkownika. W kazdej opcji najpierw robie 2 pêtle które zczytuj¹ piksele i sprawdzaja je i ustawia w odpowiedni sposób w zale¿noœci od wzoru. Na samym koñcu czyli po klikniêciu przycisku refreszuje sie 3 box. 
+
+Lab5 transformacja potegowa
+Program napisany w C#. na poczatku stworzy³em dwie zmienne prywatne szer i wys, które przydadz¹ sie do przypisania wysokoœci i szerokoœci zdjecia. w przycisku 2 odczytuje plik za pomoca pola openFileDialog1. w button 3 dokonuje transformacji potêgowej. Zrobi³em to na podstawie 2 pêtl które zczytuj¹ pixele i przypisuj¹ do k. PóŸniej sprawdzam ifami odpowiednie warunki by przypisac odpowiednie kolory pikselom.
+Na sam koniec ustawiam piksele tak by by³y odpowiednio transformowane i refreszuje obraz.
+w buttonie 4 analogicznie jak w butonie 3 stosuje warunki. zmienna wartoœæ przyjmuje w sobie to co wpisa³ uzytkownik w textboxie2. w pêtlach zczytuje piksele obrazka. i potem za pomoca ifów wybiera odpowiednie kolory w zale¿nosci od wartosci któr¹ wpisalismy w textboxie. na samym koñcu ustawia piksele i refreszuje obrazek.
