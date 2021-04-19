@@ -1,0 +1,10 @@
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\bin\Debug\16wzorow.exe.config
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\bin\Debug\16wzorow.exe
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\bin\Debug\16wzorow.pdb
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\_16wzorow.Form1.resources
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\_16wzorow.Properties.Resources.resources
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\16wzorow.csproj.GenerateResource.cache
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\16wzorow.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\16wzorow.exe
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\16wzorow.pdb
+C:\Users\Piotr\source\repos\16wzorow\16wzorow\obj\Debug\16wzorow.csprojAssemblyReference.cache
