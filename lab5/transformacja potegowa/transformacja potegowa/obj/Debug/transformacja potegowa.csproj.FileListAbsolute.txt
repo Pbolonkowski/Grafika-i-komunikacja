@@ -1,0 +1,10 @@
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\bin\Debug\transformacja potegowa.exe.config
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\bin\Debug\transformacja potegowa.exe
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\bin\Debug\transformacja potegowa.pdb
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja_potegowa.Form1.resources
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja_potegowa.Properties.Resources.resources
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja potegowa.csproj.GenerateResource.cache
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja potegowa.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja potegowa.exe
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja potegowa.pdb
+C:\Users\Piotr\source\repos\transformacja potegowa\transformacja potegowa\obj\Debug\transformacja potegowa.csprojAssemblyReference.cache
