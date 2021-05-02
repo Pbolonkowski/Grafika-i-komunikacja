@@ -1,0 +1,10 @@
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\bin\Debug\grafika-lab7.exe.config
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\bin\Debug\grafika-lab7.exe
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\bin\Debug\grafika-lab7.pdb
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika_lab7.Form1.resources
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika_lab7.Properties.Resources.resources
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika-lab7.csproj.GenerateResource.cache
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika-lab7.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika-lab7.exe
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika-lab7.pdb
+C:\Users\Piotr\source\repos\grafika-lab7\grafika-lab7\obj\Debug\grafika-lab7.csprojAssemblyReference.cache
