@@ -1,0 +1,10 @@
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\bin\Debug\grafika - lab8.exe.config
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\bin\Debug\grafika - lab8.exe
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\bin\Debug\grafika - lab8.pdb
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika - lab8.csprojAssemblyReference.cache
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika___lab8.Form1.resources
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika___lab8.Properties.Resources.resources
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika - lab8.csproj.GenerateResource.cache
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika - lab8.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika - lab8.exe
+C:\Users\Piotr\source\repos\grafika - lab8\grafika - lab8\obj\Debug\grafika - lab8.pdb
